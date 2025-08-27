@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中秋節禮品訂購</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <!-- Swiper 套件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body class="bg-yellow-50 font-sans">
+  <!-- 導覽列 -->
+  <nav class="bg-yellow-600 text-white p-4 flex justify-between">
+    <h1 class="text-xl font-bold">中秋節禮品</h1>
+    <div>
+      <a href="index.html" class="px-3">首頁</a>
+      <a href="order.html" class="px-3">訂購</a>
+    </div>
+  </nav>
+
+  <!-- 首頁內容 -->
+  <section class="text-center py-12">
+    <h2 class="text-3xl font-bold mb-6">中秋佳節，送禮首選</h2>
+    <p class="max-w-xl mx-auto mb-8">
+      精選月餅禮盒、茶點組合與特色伴手禮，傳遞團圓心意。
+    </p>
+
+    <!-- Slider 區塊 -->
+    <div class="max-w-3xl mx-auto">
+      <div class="swiper rounded-2xl shadow-lg">
+        <div class="swiper-wrapper">
+          <!-- 幻燈片 1 -->
+          <div class="swiper-slide relative">
+            <img src="assets/images/mooncake1.jpg" class="w-full rounded-2xl" alt="精美月餅禮盒">
+            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 rounded-b-2xl">
+              <h3 class="text-lg font-bold">經典月餅禮盒</h3>
+              <p class="text-sm">嚴選傳統口味，象徵團圓美滿。</p>
+            </div>
+          </div>
+          <!-- 幻燈片 2 -->
+          <div class="swiper-slide relative">
+            <img src="assets/images/mooncake2.jpg" class="w-full rounded-2xl" alt="茶點禮盒">
+            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 rounded-b-2xl">
+              <h3 class="text-lg font-bold">茶點組合</h3>
+              <p class="text-sm">搭配香醇好茶，閒話家常最佳選擇。</p>
+            </div>
+          </div>
+          <!-- 幻燈片 3 -->
+          <div class="swiper-slide relative">
+            <img src="assets/images/mooncake3.jpg" class="w-full rounded-2xl" alt="特色伴手禮">
+            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4 rounded-b-2xl">
+              <h3 class="text-lg font-bold">特色伴手禮</h3>
+              <p class="text-sm">融合創新與傳統，送禮自用兩相宜。</p>
+            </div>
+          </div>
+        </div>
+        <!-- 分頁點 -->
+        <div class="swiper-pagination"></div>
+        <!-- 左右箭頭 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- 按鈕 -->
+    <div class="mt-8">
+      <a href="order.html" class="bg-yellow-600 text-white px-6 py-3 rounded-xl hover:bg-yellow-700">
+        前往訂購
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>© 2025 中秋節禮品</p>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
